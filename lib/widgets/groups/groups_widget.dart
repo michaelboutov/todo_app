@@ -81,7 +81,7 @@ class GroupListRowWidget extends StatelessWidget {
       actionPane: SlidableDrawerActionPane(),
       child: ListTile(
         title: Text(group.name),
-        onTap: () {},
+        onTap: () => model.showTasks(context: context, groupIndex: indexList),
       ),
       secondaryActions: <Widget>[
         IconSlideAction(

@@ -13,6 +13,16 @@ class GroupWidgetModel extends ChangeNotifier {
     Navigator.of(context).pushNamed('/groups/form');
   }
 
+  void showTasks(
+      {required BuildContext context, required int groupIndex}) async {
+    if (!Hive.isAdapterRegistered(1)) {
+      Hive.registerAdapter(GroupAdapter());
+    }
+    final box = await Hive.openBox<Group>('grops_box');
+    final groupKey = box.keyAt(groupIndex) as int;
+    Navigator.of(context).pushNamed('/groups/tasks', arguments: groupKey);
+  }
+
   void setUp() async {
     if (!Hive.isAdapterRegistered(1)) {
       Hive.registerAdapter(GroupAdapter());
