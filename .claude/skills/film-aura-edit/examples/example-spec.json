@@ -1,0 +1,21 @@
+{
+  "output": {"path": "film_aura_edit.mp4", "width": 1080, "height": 1920, "fps": 30, "duration": 12.0},
+  "reframe": "cover",
+  "look": {"preset": "natural"},
+  "grid": {"bpm": 100, "offset": 0.6},
+  "shots": [
+    {"at": 0.0, "src": "film.mp4", "start": 3721.35, "role": "hook", "dialogue": true, "pan": [0.46, 0.5],
+     "note": "character says the line; starts 0.15 s before the first word"},
+    {"at": 3.0, "src": "film.mp4", "start": 3790.0, "role": "build", "pan": [0.5, 0.5], "zoom": [1.0, 1.08]},
+    {"at": 4.8, "src": "film.mp4", "start": 3802.4, "role": "build", "pan": [0.35, 0.5]},
+    {"at": 6.0, "src": "film.mp4", "start": 3811.0, "role": "build", "reframe": "blur"},
+    {"at": 7.2, "src": "film.mp4", "start": 3850.2, "role": "payoff", "pan": [0.5, 0.45],
+     "ramp": [[0, 1.0], [0.4, 0.3]], "flash": 0.12, "punch": [{"at": 0.0, "amount": 0.07, "decay": 0.3}],
+     "note": "strongest visual moment, cut exactly on the drop"},
+    {"at": 9.6, "src": "film.mp4", "start": 3860.0, "role": "outro", "pan": [0.5, 0.5], "dip": 0.6}
+  ],
+  "text": [
+    {"text": "never look back", "start": 7.6, "end": 11.0, "y": 0.5, "size": 0.034}
+  ],
+  "audio": {"music": "track.mp3", "music_start": 41.2, "fade_out": 1.0, "duck_db": -14, "source_gain_db": -18}
+}
